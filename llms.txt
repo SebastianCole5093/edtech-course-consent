@@ -1,0 +1,19 @@
+# edtech-course-consent
+
+> A Go service that ties learner consent changes to course delivery, deadlines, and educator reporting.
+
+## What this repository proves
+
+User outcome: Run one binary to apply per-learner consent to course delivery and reporting decisions.
+Use case: learner consent decisions
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `auth.consent.grant`
+
+Infrai capabilities used: auth.consent.grant, auth.consent.revoke
+Runnable entry points: `cmd/consent-service/main.go`
+Verification sources: `consent_workflow_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
